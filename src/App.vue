@@ -1,10 +1,6 @@
 <script>
   import OwnerService from '@/api-services/owner.service';
 
-  defineProps({
-    description: String,
-  });
-
   export default {
     items: [],
     error: [],
@@ -26,9 +22,7 @@
     <img src="../public/logo.png" alt="logo">
   </header>
   <main v-if="items">
-    <div v-for="item in items">
-      <ProductScreen :description="item.description"></ProductScreen>
-    </div>
+    <div v-for="item in items">{{items}}</div>
 
   </main>
 </template>
